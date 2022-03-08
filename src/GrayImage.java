@@ -44,7 +44,7 @@ public class GrayImage
     {
       for (int j = 0; j < pixelValues[0].length; j++)
       {
-        if (!((i + 2> pixelValues.length) && (j + 2 > pixelValues[0].length)))
+        if (i + 2 < pixelValues.length && j + 2 < pixelValues[i].length)
         {
           pixelValues[i][j] -= pixelValues[i+2][j+2];
 
@@ -52,7 +52,6 @@ public class GrayImage
           {
             pixelValues[i][j] = BLACK;
           }
-
         }
       }
     }
